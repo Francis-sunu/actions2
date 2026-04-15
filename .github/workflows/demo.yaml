@@ -6,11 +6,11 @@ jobs:
     steps:
       - name: Checking out the repository's code
         uses: actions/checkout@v3
-      - run: echo "${{ github.event_name }} event automatically triggered this job."
-      - run: echo "A ${{ runner.os }} server hosted by GitHub has this job running."
-      - run: echo "Details of your repository: repo-name: ${{ github.repository }}, branch: ${{ github.ref }}."
-      - run: echo "The runner has cloned your ${{ github.repository }} repository."
-      - run: echo "The workflow can now test your code with the runner."
+      - run: echo '${{ github.event_name }} event automatically triggered this job.'
+      - run: echo 'A ${{ runner.os }} server hosted by GitHub has this job running.'
+      - run: echo 'Details - repo ${{ github.repository }}, branch ${{ github.ref }}.'
+      - run: echo 'The runner has cloned your ${{ github.repository }} repository.'
+      - run: echo 'The workflow can now test your code with the runner.'
       - name: List files in the repository
         run: ls $GITHUB_WORKSPACE
-      - run: echo "This job has a ${{ job.status }} status."
+      - run: echo 'This job has a ${{ job.status }} status.'
